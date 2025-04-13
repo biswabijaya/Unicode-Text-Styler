@@ -30,5 +30,4 @@ console.log(toUnicodeVariant("Push", "mirrored", "underline"));
 - Exotic: `greek`, `mirrored`, `upside`, `glitch`, `wiggly`, `anchor`, `faux`
 
 ## License
-
 MIT

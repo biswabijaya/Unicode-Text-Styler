@@ -1,33 +1,65 @@
 # Unicode Text Styler
 
-Convert plain text into fancy Unicode variants like 𝗯𝗼𝗹𝗱, 𝓼𝓬𝓻𝓲𝓹𝓽, 🅒🅘🅡🅒🅛🅔, ᴍɪʀʀᴏʀᴇᴅ, and more!
+Convert plain text into fancy Unicode variants like 𝗯𝗼𝗹𝗱, 𝓼𝓬𝓻𝓲𝓹𝓽, 🅒🅘🅡🅒🅛🅔, ꮯꞓꮯ, and more!
 
 Perfect for:
 - LinkedIn posts
 - Instagram captions
-- Mobile app push notifications
-- Stylish blog headers
+- Push notifications
+- Stylish logs and terminal messages
 
-## Installation
+---
+
+## ✨ Features
+
+✅ Supports styles like:
+- **Classic**: Bold, Italic, Bold-Italic, Underline, Strike, Fullwidth
+- **Sans & Script**: Sans, Bold Sans, Italic Sans, Bold Italic Sans
+- **Fancy Fonts**: Script, Bold Script, Fraktur, Bold Fraktur, Doublestruck
+- **Special Shapes**: Circled, Circled Negative, Squared, Dark Squared, Parenthesized
+- **Exotic**: Greek, Mirrored, Upside Down, Glitch, Wiggly, Crossed, Cutout, Ancient, UFO
+- **Case Variants**: UPPER, lower, camelCase, Title, Sentence, InVeRsE, aLtErNaTiNg
+
+---
+
+## 📦 Installation
 
 ```bash
 npm install unicode-text-styler
 ```
 
-## Usage
+🔗 [View on NPM](https://www.npmjs.com/package/unicode-text-styler)
+
+---
+
+## 🧪 Usage
 
 ```js
 const { toUnicodeVariant } = require('unicode-text-styler');
 
-console.log(toUnicodeVariant("Text Editor", "bold italic"));
-console.log(toUnicodeVariant("Stylish", "circled negative"));
-console.log(toUnicodeVariant("Push", "mirrored", "underline"));
+console.log(toUnicodeVariant("Hello World", "bold"));
+console.log(toUnicodeVariant("Underline", "monospace", "underline"));
+console.log(toUnicodeVariant("Funky", "glitch"));
 ```
 
-## Variants Supported
-- `bold`, `italic`, `bold italic`, `monospace`, `sans`, `script`
-- `circled`, `circled negative`, `parenthesis`, `squared`, `squared negative`
-- Exotic: `greek`, `mirrored`, `upside`, `glitch`, `wiggly`, `anchor`, `faux`
+---
 
-## License
+## 🌐 Live Demo
+👉 Try it at: [https://biswabijaya.com/Unicode-Text-Styler/](https://biswabijaya.com/Unicode-Text-Styler/)
+
+---
+
+## 🛠 Supported Flags
+- `underline`
+- `strike`
+
+---
+
+## 📖 License
 MIT
+
+Made with 💖 by [@biswabijaya](https://github.com/biswabijaya)
+
+---
+
+> ✨ Star this project on [GitHub](https://github.com/biswabijaya/Unicode-Text-Styler) if you find it useful!

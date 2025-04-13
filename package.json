@@ -1,6 +1,6 @@
 {
-    "name": "Unicode-Text-Styler",
-    "version": "1.0.0",
+    "name": "unicode-text-styler",
+    "version": "1.0.1",
     "description": "Format Unicode text with bold, italic, circled, exotic styles — perfect for LinkedIn, Instagram, Push Notifications, and social posts.",
     "main": "index.js",
     "keywords": [
@@ -21,6 +21,6 @@
     "license": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/biswabijaya/Unicode-Text-Styler"
+        "url": "https://github.com/biswabijaya/Unicode-Text-Styler.git"
     }
 }

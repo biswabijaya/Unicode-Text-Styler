@@ -28,83 +28,106 @@
 <body>
 
     <div class="container">
-        <h2 class="my-3">Unicode Text Styler for Social Posts and Mobile APP Push Notification</h2>
-        <textarea id="editor" class="form-control mb-3" rows="8" placeholder="Type or paste text here...
-To apply styles, select the text and click on the buttons below.
-
-You can use this tool to create fancy text for social media posts, mobile app push notifications, and more.
-
-Example: This is 𝗯𝗼𝗹𝗱, 𝘪𝘵𝘢𝘭𝘪𝘤, 𝙗𝙤𝙡𝙙-𝙞𝙩𝙖𝙡𝙞𝙘, 𝚞̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲𝚍̲, 𝗯̲𝗼̲𝗹̲𝗱̲-̲𝘂̲𝗻̲𝗱̲𝗲̲𝗿̲𝗹̲𝗶̲𝗻̲𝗲̲𝗱̲, strikethrough, circle, b-circle, box, 🅱-🅱🅾🆇, ＣＲＡＺＹ, 𝓈𝒸𝓇𝒾𝓅𝓉, 𝓫𝓸𝓵𝓭-𝓼𝓬𝓻𝓲𝓹𝓽, 𝔊𝔩𝔬𝔱𝔥𝔦𝔠, 𝔻𝕠𝕦𝕓𝕝𝕖𝕤𝕥𝕣𝕦𝕔𝕜 text..
-Made with ❤️ by 𝐁𝐈𝐒𝐖𝐀 𝘉𝘪𝘫𝘢𝘺𝘢 𝒮𝒶𝓂𝒶𝓁"></textarea>
-
-        <h5 class="mt-3">Exotic Styles</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply greek" onclick="apply('greek')">ƬΣXƬ</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply mirrored" onclick="apply('mirrored')">ᴙoTibƎ</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply upside down" onclick="apply('upside')">ʇxǝʇ</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply glitch" onclick="apply('glitch')">ꮯꞓꮯ</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply wiggly" onclick="apply('wiggly')">t̴e̷x̸t̷</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply anchor" onclick="apply('anchor')">Ͳҽ×է</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply faux cyrillic" onclick="apply('faux')">Гэхт</button>
+        <div>
+            <h4>Unicode Text Styler for Social Posts and Mobile APP Push Notification</h4>
+            <p class="mb-3"> You can use this tool to create fancy text for social media posts, mobile app push notifications, and more.</p>
         </div>
-
-        <h5 class="mt-3">Classic Styles</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold" onclick="apply('bold')">𝗕𝗼𝗹𝗱</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply italic" onclick="apply('italic')">𝘪𝘵𝘢𝘭𝘪𝘤</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold italic" onclick="apply('bold italic')">𝙗𝙤𝙡𝙙-𝙞𝙩𝙖𝙡𝙞𝙘</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply underline" onclick="apply('monospace','underline')">𝚞̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold underline" onclick="apply('bold','underline')">𝗯̲𝗼̲𝗹̲𝗱̲-̲𝘂̲𝗻̲𝗱̲𝗲̲𝗿̲𝗹̲𝗶̲𝗻̲𝗲̲</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply strikethrough" onclick="apply('monospace','strike')">𝚜̶𝚝̶𝚛̶𝚒̶𝚔̶𝚎̶𝚝̶𝚑̶𝚛̶𝚘̶𝚞̶𝚐̶𝚑̶</button>
+        <div class="sticky-top">
+<textarea id="editor" class="form-control mb-3" rows="5" placeholder="Type or paste text here..., 
+To apply styles, select text after typing and hover on below styles to preview styles and click to apply. 
+Once ready, you can copy the text from here and paste it anywhere you want."></textarea>
         </div>
+        <div>
+            <h5 class="mt-3">Exotic Styles</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3"> 
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'greek')" onclick="applyStyle('greek')" >Γρεεκ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'mirrored')" onclick="applyStyle('mirrored')" >Wᴉɹɹoɹ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'upside')" onclick="applyStyle('upside')" >∩dsᴉpǝ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'glitch')" onclick="applyStyle('glitch')" >ꞡꞎɨƭƈɧ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'wiggly')" onclick="applyStyle('wiggly')" >ฬเﻮﻮɭץ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'wiggly2')" onclick="applyStyle('wiggly2')" >աɨռɢʟʏ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'crossed')" onclick="applyStyle('crossed')" >₵ⱤØ₴₴ɆĐ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'cutout')" onclick="applyStyle('cutout')" >𝓬𝕌tσ𝕌t</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'cutout')" onclick="applyStyle('cutout')" >𝓬𝕌tσ𝕌t</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'cutout2')" onclick="applyStyle('cutout2')" >𝓬𝓤𝓉ㄖ𝓤𝓉</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'ancient')" onclick="applyStyle('ancient')" >ꋬꋊꉔ꒐ꏂꋊ꓄</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'ancient2')" onclick="applyStyle('ancient2')">Aꋊꀯꂑꈼꋊꋖ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'ufo')" onclick="applyStyle('ufo')" >ᑌᖴO</button>
+            </div>
 
-        <h5 class="mt-3">Special Shapes</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply circled" onclick="apply('circled')">ⓒⓘⓡⓒⓛⓔ</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply black circles" onclick="apply('circled negative')">🅑🅛🅐🅒🅚 🅒🅘🅡🅒🅛🅔</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply squares" onclick="apply('squared')">🆂🆀🆄🅰🆁🅴🆂</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply dark squares" onclick="apply('squared negative')">🅓🅐🅡🅚 🅢🅠🅤🅐🅡🅔🅢</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply parenthesized" onclick="apply('parenthesis')">⒫⒜⒭⒠⒩</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply wide font" onclick="apply('fullwidth')">ＷＩＤＥ</button>
-        </div>
+            <h5 class="mt-3">Classic Styles</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold')" onclick="applyStyle('bold')" >𝗕𝗼𝗹𝗱</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'italic')" onclick="applyStyle('italic')" >𝘪𝘵𝘢𝘭𝘪𝘤</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold italic')" onclick="applyStyle('bold italic')" >𝙗𝙤𝙡𝙙-𝙞𝙩𝙖𝙡𝙞𝙘</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'monospace','underline')" onclick="applyStyle('monospace','underline')" >𝚞̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold','underline')" onclick="applyStyle('bold','underline')" >𝗯̲𝗼̲𝗹̲𝗱̲-𝘂̲𝗻̲𝗱̲𝗲̲𝗿̲𝗹̲𝗶̲𝗻̲𝗲̲</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'monospace','strike')" onclick="applyStyle('monospace','strike')" >𝚜̶𝚝̶𝚛̶𝚒̶𝚔̶𝚎̶𝚝̶𝚑̶𝚛̶𝚘̶𝚞̶𝚐̶𝚑̶</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'fullwidth')" onclick="applyStyle('fullwidth')" >ＷＩＤＥ</button>
+            </div>
 
-        <h5 class="mt-3">Fancy Fonts</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply script" onclick="apply('script')">𝓢𝓬𝓻𝓲𝓹𝓽</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold script" onclick="apply('bold script')">𝓑𝓸𝓵𝓭</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply fraktur" onclick="apply('gothic')">𝔊𝔩𝔬𝔱𝔥𝔦𝔠</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply double-struck" onclick="apply('doublestruck')">𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜</button>
-        </div>
+            <h5 class="mt-3">Sans</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'sans')" onclick="applyStyle('sans')" >𝖲𝖺𝗇𝗌</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold sans')" onclick="applyStyle('bold sans')" >𝗕𝗼𝗹𝗱 𝗦𝗮𝗻𝘀</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'italic sans')" onclick="applyStyle('italic sans')" >𝘐𝘵𝘢𝘭𝘪𝘤 𝘚𝘢𝘯𝘴</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold italic sans')" onclick="applyStyle('bold italic sans')" >𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘 𝙎𝙖𝙣𝙨</button>
+            </div>
 
-        <h5 class="mt-3">Sans</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold sans" onclick="apply('bold sans')">𝗕𝗼𝗹𝗱</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply italic sans" onclick="apply('italic sans')">𝘐𝘵𝘢𝘭</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply bold italic sans" onclick="apply('bold italic sans')">𝙏𝙚𝙭</button>
-        </div>
+            <h5 class="mt-3">Fancy Fonts</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'cursive')" onclick="applyStyle('cursive')" >𝒞𝓊𝓇𝓈𝒾𝓋ℯ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'cursive_bold')" onclick="applyStyle('cursive_bold')" >𝓑𝓸𝓵𝓭 𝓒𝓾𝓻𝓼𝓲𝓿𝓮</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'gothic')" onclick="applyStyle('gothic')" >𝔊𝔩𝔬𝔱𝔥𝔦𝔠</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'bold gothic')" onclick="applyStyle('bold gothic')" >𝔅𝔬𝔩𝔡</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'doublestruck')" onclick="applyStyle('doublestruck')" >𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜</button>
+            </div>
 
-        <h5 class="mt-3">Case</h5>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply UPPERCASE" onclick="caseTransform('upper')">UPPER</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply lowercase" onclick="caseTransform('lower')">lower</button>
-            <button class="btn btn-style btn-outline-secondary" data-bs-toggle="tooltip" title="Apply camelCase" onclick="caseTransform('camel')">camelCase</button>
+            <h5 class="mt-3">Special Shapes</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'circled')" onclick="applyStyle('circled')" >ⓒⓘⓡⓒⓛⓔ</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'circled negative')" onclick="applyStyle('circled negative')" >🅑🅛🅐🅒🅚 🅒🅘🅡🅒🅛🅔</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'squared')" onclick="applyStyle('squared')" >🅂🅀🅄🄰🅁🄴</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'squared negative')" onclick="applyStyle('squared negative')" >🅱🅻🅰🅲🅺 🆂🆀🆄🅰🆁🅴</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'parenthesis')" onclick="applyStyle('parenthesis')" >⒫⒜⒭⒠⒩</button>
+            </div>
+
+            <h5 class="mt-3">Case</h5>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'upper')" onclick="applyStyle('upper')" >UPPER</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'lower')" onclick="applyStyle('lower')" >lower</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'camel')" onclick="applyStyle('camel')" >camelCase</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'capitalized')" onclick="applyStyle('capitalized')" >Capitalized</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'title')" onclick="applyStyle('title')" >Title Case</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'sentence')" onclick="applyStyle('sentence')" >Sentence case</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'inverse')" onclick="applyStyle('inverse')" >InVeRsE CaSe</button>
+                <button class="btn btn-style btn-outline-secondary" data-bs-toggle="popover" data-bs-placement="bottom" onmouseout="removePreview(this)" onmouseover="previewStyle(this,'alternating')" onclick="applyStyle('alternating')" >aLtErNaTiNg cAsE</button>
+            </div>
+
+            <!-- For more click here to explore https://glyphy.io/ -->
+            <h5 class="mt-3">More Styles</h5>
+            <a href="https://glyphy.io/" target="_blank" class="btn btn-outline-secondary">Click here to explore more styles</a>
         </div>
+        
+
+        <footer style="font-family: sans-serif; font-size: 1.5rem;">
+            <hr style="margin: 1rem 0;">
+            ⭐ Star this project on <a href="https://github.com/biswabijaya/Unicode-Text-Styler" target="_blank">GitHub:@biswabijaya/Unicode-Text-Styler</a><br>
+            📦 Use with NPM: <code
+            onclick="if (!window.__cfRLUnblockHandlers) return false; copyNpmCommand()"
+                style="cursor: pointer;">npm install unicode-text-styler</codeonclick=>
+        </footer>
 
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?v=1"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js?v=1"></script>
     
-    <script type="text/javascript">
-        // If you do not want to use jQuery you can use Pure JavaScript. See FAQ below
-        $(document).ready(function () {
-            $('[data-bs-toggle="tooltip"]').tooltip();
-        });
-    </script>
 
-    <script src="https://cdn.jsdelivr.net/gh/biswabijaya/unicode-text-styler@master/dist/toUnicodeVariantExtended.js?v=1"></script>    
+    <!-- <script src="https://cdn.jsdelivr.net/gh/biswabijaya/unicode-text-styler@master/dist/toUnicodeVariantExtended.js?v=1"></script>     -->
+    <script src="../dist/toUnicodeVariantExtended.js"></script>
     <script>
-        function apply(variant, flags = '') {
+        function applyStyle(variant, flags = '') {
             const editor = document.getElementById("editor");
             const start = editor.selectionStart;
             const end = editor.selectionEnd;
@@ -114,30 +137,11 @@ Made with ❤️ by 𝐁𝐈𝐒𝐖𝐀 𝘉𝘪𝘫𝘢𝘺𝘢 𝒮𝒶𝓂�
         }
 
         function copyToClipboard() {
-            const editor = document.getElementById("editor");
-            editor.select();
-            editor.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(editor.value).then(() => alert("Copied!"));
-        }
-
-        function caseTransform(type) {
-            const editor = document.getElementById("editor");
-            const start = editor.selectionStart;
-            const end = editor.selectionEnd;
-            let selected = editor.value.substring(start, end);
-
-            if (type === 'upper') {
-                selected = selected.toUpperCase();
-            } else if (type === 'lower') {
-                selected = selected.toLowerCase();
-            } else if (type === 'camel') {
-                selected = selected
-                    .toLowerCase()
-                    .replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+                const editor = document.getElementById("editor");
+                editor.select();
+                editor.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(editor.value).then(() => alert("Copied!"));
             }
-
-            editor.setRangeText(selected, start, end, 'end');
-        }
 
         function resetText() {
             const editor = document.getElementById("editor");
@@ -150,6 +154,36 @@ Made with ❤️ by 𝐁𝐈𝐒𝐖𝐀 𝘉𝘪𝘫𝘢𝘺𝘢 𝒮𝒶𝓂�
 
             editor.setRangeText(selected, start, end, 'end');
         }
+
+        function previewStyle(button, variant, flags = '') {
+            const editor = document.getElementById("editor");
+            const start = editor.selectionStart;
+            const end = editor.selectionEnd;
+            const selected = editor?.value?.substring(start, end) || "NO TEXT SELECTED, Please type and select text to Preview.";
+            const transformed = toUnicodeVariant(selected, variant, flags);
+            button.setAttribute('data-bs-title', selected);
+            button.setAttribute('data-bs-content', transformed);
+            $(button).popover('show');
+        }
+        function removePreview(button) {
+            $(button).popover('dispose');
+        }
+        function copyNpmCommand() {
+            const command = "npm install unicode-text-styler";
+            navigator.clipboard.writeText(command).then(() => alert("Copied!"));
+        }
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+            const isDarkMode = body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "true") {
+                document.body.classList.add("dark-mode");
+            }
+        });
     </script>
 
 </body>

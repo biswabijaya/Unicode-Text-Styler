@@ -1,6 +1,6 @@
 {
     "name": "@biswabijaya/unicode-text-styler",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "description": "Format Unicode text with bold, italic, circled, exotic styles — perfect for LinkedIn, Instagram, Push Notifications, and social posts.",
     "main": "index.js",
     "keywords": [

@@ -28,8 +28,7 @@ Perfect for:
 - **Case Variants**: UPPER, lower, camelCase, Capitalized, Title Case, Sentence case, InVeRsE CaSe, aLtErNaTiNg cAsE
 
 ---
-
-## 📦 Installation
+### 🧩 Installation
 
 ```bash
 npm install unicode-text-styler
@@ -45,8 +44,16 @@ npm install unicode-text-styler
 const { toUnicodeVariant } = require('unicode-text-styler');
 
 console.log(toUnicodeVariant("Hello World", "bold"));
-console.log(toUnicodeVariant("Underline", "monospace", "underline"));
-console.log(toUnicodeVariant("Funky", "glitch"));
+// Output: 𝗛𝗲𝗹𝗹𝗼 𝗪𝗼𝗿𝗹𝗱
+console.log(toUnicodeVariant("CIRCLE", "circled"));
+// Output: ⒸⒾⓇⒸⓁⒺ
+console.log(toUnicodeVariant("BLOCK", "squared negative"));
+// Output: 🅱🅻🅾🅲🅺
+console.log(toUnicodeVariant("Stylish", "monospace", "underline,strike"));
+// Output: 𝚜̶̲𝚝̶̲𝚢̶̲𝚕̶̲𝚒̶̲𝚜̶̲𝚑̶̲
+// Upper/lower are not unicode variants but case utilities
+console.log("linkedin".toUpperCase()); // LINKEDIN
+console.log("LinkedInIsGreat".toLowerCase()); // linkedinisgreat
 ```
 
 ---
@@ -69,3 +76,5 @@ MIT
 > ✨ Star this project on [GitHub](https://github.com/biswabijaya/Unicode-Text-Styler) if you find it useful!
 
 Made with 💖 by [@biswabijaya](https://github.com/biswabijaya)
+
+
